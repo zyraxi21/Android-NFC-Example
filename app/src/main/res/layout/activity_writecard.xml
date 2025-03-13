@@ -34,7 +34,7 @@
         android:layout_width="284dp"
         android:layout_height="58dp"
         android:ems="10"
-        android:inputType="text"
+        android:inputType="textMultiLine"
         android:text="@string/text_to_write"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"

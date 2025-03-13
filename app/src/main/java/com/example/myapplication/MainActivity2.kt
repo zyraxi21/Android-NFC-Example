@@ -204,17 +204,17 @@ class MainActivity2 : AppCompatActivity() {
                                     record.tnf == NdefRecord.TNF_WELL_KNOWN
                                             && record.type.contentEquals(NdefRecord.RTD_TEXT) -> {
                                         val text = parseTextRecord(record)
-                                        stringBuilder.append("[TEXT] $text\n")
+                                        stringBuilder.append(getString(R.string.text, text))
                                     }
                                     // 处理 URI 类型记录
                                     record.tnf == NdefRecord.TNF_WELL_KNOWN
                                             && record.type.contentEquals(NdefRecord.RTD_URI) -> {
                                         val uri = parseUriRecord(record)
-                                        stringBuilder.append("[URI] $uri\n")
+                                        stringBuilder.append(getString(R.string.uri, uri))
                                     }
                                     // 处理其他类型
                                     else -> {
-                                        stringBuilder.append("[UNKNOWN] ${record.toHexString()}\n")
+                                        stringBuilder.append(getString(R.string.unknown, record.toHexString()))
                                     }
                                 }
                             }
